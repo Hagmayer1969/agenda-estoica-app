@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "text": "Você tem poder sobre sua mente - não sobre eventos externos. Perceba isso, e você encontrará força.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["controle", "força interior", "aceitação"]
+  },
+  {
+    "id": "2",
+    "text": "Não é o que acontece com você, mas como você reage a isso que importa.",
+    "author": "Epicteto",
+    "source": null,
+    "themes": ["reação", "responsabilidade", "perspectiva"]
+  },
+  {
+    "id": "3",
+    "text": "A felicidade da sua vida depende da qualidade dos seus pensamentos.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["felicidade", "pensamentos", "mindfulness"]
+  },
+  {
+    "id": "4",
+    "text": "O homem não é perturbado pelas coisas, mas pela visão que ele tem delas.",
+    "author": "Epicteto",
+    "source": "Enchiridion",
+    "themes": ["perspectiva", "percepção", "paz interior"]
+  },
+  {
+    "id": "5",
+    "text": "Às vezes, mesmo viver é um ato de coragem.",
+    "author": "Sêneca",
+    "source": null,
+    "themes": ["coragem", "resiliência", "vida"]
+  },
+  {
+    "id": "6",
+    "text": "A melhor vingança é não ser como seu inimigo.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["virtude", "perdão", "caráter"]
+  },
+  {
+    "id": "7",
+    "text": "Não desperdice mais tempo discutindo o que um bom homem deveria ser. Seja um.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["ação", "virtude", "integridade"]
+  },
+  {
+    "id": "8",
+    "text": "A riqueza consiste não em ter grandes posses, mas em ter poucas necessidades.",
+    "author": "Epicteto",
+    "source": null,
+    "themes": ["simplicidade", "contentamento", "desapego"]
+  },
+  {
+    "id": "9",
+    "text": "Não temos uma vida curta, mas desperdiçamos muito dela.",
+    "author": "Sêneca",
+    "source": "Sobre a Brevidade da Vida",
+    "themes": ["tempo", "produtividade", "consciência"]
+  },
+  {
+    "id": "10",
+    "text": "Se não é certo, não o faça. Se não é verdade, não o diga.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["ética", "verdade", "integridade"]
+  },
+  {
+    "id": "11",
+    "text": "O obstáculo no caminho se torna o caminho. Nunca esqueça, dentro de cada obstáculo há uma oportunidade para melhorar nossa condição.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["desafios", "oportunidade", "crescimento"]
+  },
+  {
+    "id": "12",
+    "text": "Primeiro, diga a si mesmo o que você gostaria de ser; e então faça o que tem que fazer.",
+    "author": "Epicteto",
+    "source": null,
+    "themes": ["objetivos", "disciplina", "ação"]
+  },
+  {
+    "id": "13",
+    "text": "Sofremos mais na imaginação do que na realidade.",
+    "author": "Sêneca",
+    "source": null,
+    "themes": ["ansiedade", "imaginação", "realidade"]
+  },
+  {
+    "id": "14",
+    "text": "Você poderia deixar a vida agora. Deixe isso determinar o que você faz, diz e pensa.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["mortalidade", "urgência", "prioridades"]
+  },
+  {
+    "id": "15",
+    "text": "Nenhuma pessoa tem o poder de ter tudo o que quer, mas está em seu poder não querer o que não tem, e alegremente colocar em bom uso o que tem.",
+    "author": "Sêneca",
+    "source": null,
+    "themes": ["aceitação", "gratidão", "contentamento"]
+  },
+  {
+    "id": "16",
+    "text": "Pense nas muitas coisas excelentes que você tem; então lembre-se de como você as desejaria apaixonadamente se não as tivesse.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["gratidão", "apreciação", "perspectiva"]
+  },
+  {
+    "id": "17",
+    "text": "É qualidade de um homem sábio resistir aos prazeres, mas de um tolo ser escravizado por eles.",
+    "author": "Epicteto",
+    "source": null,
+    "themes": ["disciplina", "autocontrole", "sabedoria"]
+  },
+  {
+    "id": "18",
+    "text": "Dificuldades fortalecem a mente, assim como o trabalho fortalece o corpo.",
+    "author": "Sêneca",
+    "source": null,
+    "themes": ["desafios", "crescimento", "força"]
+  },
+  {
+    "id": "19",
+    "text": "Quando você acorda de manhã, diga a si mesmo: as pessoas com quem eu lido hoje serão intrusivas, ingratas, arrogantes, desonestas, ciumentas e mal-humoradas. São assim porque não conseguem distinguir o bem do mal.",
+    "author": "Marco Aurélio",
+    "source": "Meditações",
+    "themes": ["paciência", "empatia", "preparação"]
+  },
+  {
+    "id": "20",
+    "text": "Não procure fazer os eventos acontecerem como você quer, mas queira que os eventos aconteçam como acontecem, e você prosperará.",
+    "author": "Epicteto",
+    "source": "Enchiridion",
+    "themes": ["aceitação", "adaptação", "serenidade"]
+  }
+]

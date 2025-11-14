@@ -1,0 +1,4 @@
+# Placeholder image for launcher icon
+# Replace this with your actual app icon
+
+This file serves as a placeholder. Add your app launcher icon here.

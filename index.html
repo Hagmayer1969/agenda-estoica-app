@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3C3C3C">
+    <meta name="description" content="Agenda Estoica 2026 - Aplicativo de reflexão e planejamento diário">
+    <title>Agenda Estoica 2026</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192x192.png">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- NAVEGAÇÃO INFERIOR -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-screen="calendar">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Calendário</span>
+            </button>
+            <button class="nav-btn" data-screen="daily">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <path d="M12 1v6m0 6v6"></path>
+                    <path d="M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24"></path>
+                    <path d="M1 12h6m6 0h6"></path>
+                    <path d="M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+                </svg>
+                <span>Hoje</span>
+            </button>
+            <button class="nav-btn" data-screen="settings">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 1v6m0 6v6"></path>
+                    <path d="M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24"></path>
+                    <path d="M1 12h6m6 0h6"></path>
+                    <path d="M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+                </svg>
+                <span>Configurações</span>
+            </button>
+        </nav>
+
+        <!-- TELAS -->
+        <main class="screens-container">
+            <!-- TELA 1: CALENDÁRIO -->
+            <section id="calendar-screen" class="screen active">
+                <header class="app-header">
+                    <h1>Agenda Estoica 2026</h1>
+                </header>
+
+                <div class="calendar-container">
+                    <!-- CONTROLES DE MÊS -->
+                    <div class="month-header">
+                        <button id="prev-month" class="month-btn">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <h2 id="current-month">Janeiro 2026</h2>
+                        <button id="next-month" class="month-btn">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- CALENDÁRIO -->
+                    <div class="calendar">
+                        <div class="weekdays">
+                            <div class="weekday">Seg</div>
+                            <div class="weekday">Ter</div>
+                            <div class="weekday">Qua</div>
+                            <div class="weekday">Qui</div>
+                            <div class="weekday">Sex</div>
+                            <div class="weekday">Sab</div>
+                            <div class="weekday">Dom</div>
+                        </div>
+                        <div id="calendar-days" class="days"></div>
+                    </div>
+
+                    <!-- INFO DO DIA SELECIONADO -->
+                    <div class="selected-day-info">
+                        <p id="selected-date">Selecione um dia</p>
+                        <button id="view-day-btn" class="btn btn-primary">Visualizar Dia</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TELA 2: DIA ATUAL -->
+            <section id="daily-screen" class="screen">
+                <header class="app-header">
+                    <button class="back-btn">←</button>
+                    <h1 id="daily-date">Janeiro 1, 2026</h1>
+                </header>
+
+                <div class="daily-content">
+                    <!-- SEÇÃO MATINAL -->
+                    <div class="section morning-section">
+                        <div class="section-header">
+                            <span class="section-icon">☀️</span>
+                            <h2>Pela Manhã: Três Motivos Para Agradecer</h2>
+                        </div>
+                        <div class="gratitudes">
+                            <div class="gratitude-item">
+                                <label>1.</label>
+                                <textarea placeholder="Primeiro motivo..." class="gratitude-input" data-index="0"></textarea>
+                            </div>
+                            <div class="gratitude-item">
+                                <label>2.</label>
+                                <textarea placeholder="Segundo motivo..." class="gratitude-input" data-index="1"></textarea>
+                            </div>
+                            <div class="gratitude-item">
+                                <label>3.</label>
+                                <textarea placeholder="Terceiro motivo..." class="gratitude-input" data-index="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REFLEXÃO ESTOICA -->
+                    <div class="section stoic-section">
+                        <div class="section-header">
+                            <span class="section-icon">📖</span>
+                            <h2>Reflexão Estoica</h2>
+                        </div>
+                        <div class="stoic-teaching-card">
+                            <p class="teaching-label">Ensinamento do dia:</p>
+                            <p id="daily-teaching" class="teaching-text">Carregando...</p>
+                        </div>
+                        <textarea id="stoic-reflection" placeholder="Sua reflexão sobre este ensinamento..." class="reflection-input"></textarea>
+                    </div>
+
+                    <!-- AGENDA DO DIA -->
+                    <div class="section schedule-section">
+                        <div class="section-header">
+                            <span class="section-icon">⏰</span>
+                            <h2>Minha Agenda de Hoje</h2>
+                        </div>
+                        <div id="schedule-list" class="schedule-list">
+                            <!-- Preenchido dinamicamente -->
+                        </div>
+                    </div>
+
+                    <!-- REFLEXÃO NOTURNA -->
+                    <div class="section evening-section">
+                        <div class="section-header">
+                            <span class="section-icon">🌙</span>
+                            <h2>Reflexão Noturna</h2>
+                        </div>
+                        <p class="evening-question">O que passei que posso melhorar para amanhã?</p>
+                        <textarea id="evening-reflection" placeholder="Sua reflexão noturna..." class="reflection-input"></textarea>
+                        <button class="btn btn-primary btn-save">Salvar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TELA 3: CONFIGURAÇÕES -->
+            <section id="settings-screen" class="screen">
+                <header class="app-header">
+                    <h1>Configurações</h1>
+                </header>
+
+                <div class="settings-container">
+                    <!-- NOTIFICAÇÕES -->
+                    <div class="settings-section">
+                        <h3>Notificações</h3>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Notificações Matinais</label>
+                                <p class="setting-description">Receba lembretes para registrar sua gratidão</p>
+                            </div>
+                            <input type="checkbox" id="morning-notif" class="toggle-switch" checked>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Horário da Manhã</label>
+                            </div>
+                            <input type="time" id="morning-time" class="time-input" value="07:00">
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Notificações à Tarde</label>
+                                <p class="setting-description">Lembrete de meio do dia</p>
+                            </div>
+                            <input type="checkbox" id="afternoon-notif" class="toggle-switch">
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Horário da Tarde</label>
+                            </div>
+                            <input type="time" id="afternoon-time" class="time-input" value="12:00">
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Notificações Noturnas</label>
+                                <p class="setting-description">Lembrete para reflexão noturna</p>
+                            </div>
+                            <input type="checkbox" id="evening-notif" class="toggle-switch">
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Horário da Noite</label>
+                            </div>
+                            <input type="time" id="evening-time" class="time-input" value="20:00">
+                        </div>
+                    </div>
+
+                    <!-- ARMAZENAMENTO -->
+                    <div class="settings-section">
+                        <h3>Dados</h3>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Exportar Dados</label>
+                                <p class="setting-description">Baixar seu progresso em JSON</p>
+                            </div>
+                            <button class="btn btn-secondary" id="export-btn">Exportar</button>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <label>Limpar Dados</label>
+                                <p class="setting-description">Remover todas as entradas (não pode desfazer)</p>
+                            </div>
+                            <button class="btn btn-danger" id="clear-btn">Limpar Tudo</button>
+                        </div>
+                    </div>
+
+                    <!-- SOBRE -->
+                    <div class="settings-section">
+                        <h3>Sobre</h3>
+                        <div class="about-info">
+                            <p><strong>Agenda Estoica 2026</strong></p>
+                            <p>Versão 1.0.0</p>
+                            <p class="about-description">Um aplicativo para reflexão diária, gratidão e desenvolvimento pessoal baseado nos ensinamentos da filosofia estoica.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/daily.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
